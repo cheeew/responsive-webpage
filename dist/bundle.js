@@ -113,7 +113,7 @@ function dropDownMenu() {
   hamburger.classList.toggle('open');
 }
 
-function imageTransition(e) {
+function imageTransition() {
   images.map(function (img) {
     var scroll = window.scrollY + window.innerHeight;
 
@@ -127,7 +127,7 @@ function imageTransition(e) {
 
 function progressBar() {
   var scrollHeight = window.scrollY;
-  var maxScroll = 1454;
+  var maxScroll = document.documentElement.scrollHeight - window.innerHeight;
   var scrollPercent = Math.round(scrollHeight / maxScroll * 100);
   console.log(scrollPercent);
   progressMeter.style.width = "".concat(scrollPercent, "%");

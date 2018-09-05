@@ -10,7 +10,7 @@ const hamburger = document.querySelector('.hamburger-container');
     hamburger.classList.toggle('open');
   }
 
-  function imageTransition(e) {
+  function imageTransition() {
     images.map(img => {
       const scroll = window.scrollY + window.innerHeight;
       if (scroll >= img.offsetTop + img.height/4) {
@@ -23,7 +23,7 @@ const hamburger = document.querySelector('.hamburger-container');
 
   function progressBar() {
     const scrollHeight = window.scrollY;
-    const maxScroll = 1454;
+    const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
     const scrollPercent = Math.round((scrollHeight / maxScroll) * 100);
     console.log(scrollPercent);
     progressMeter.style.width = `${scrollPercent}%`;

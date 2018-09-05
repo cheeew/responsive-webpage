@@ -3,6 +3,7 @@ body {
   margin: 0 0 0 0;
   padding: 0 0 0 0;
   line-height: 1.25;
+  width: 100vw;
 }
 
 h1, h3, p {
@@ -10,11 +11,11 @@ h1, h3, p {
 }
 
 h1, h3 {
-  font-family: Playfair Display;
+  font-family: 'Playfair Display';
 }
 
 p, a {
-  font-family: Raleway;
+  font-family: 'Raleway';
 }
 
 /*Sidebar Navigation Styles*/
@@ -28,6 +29,17 @@ nav {
 
 header {
   margin-top: 3%;
+  text-align: center;
+  flex: 1 1 auto;
+  width: 75%;
+}
+
+.page-title {
+  flex: 0 1 auto;
+}
+
+.sub-title {
+  flex: 0 1 auto;
 }
 
 .sidebar {
@@ -36,6 +48,7 @@ header {
   padding: 0;
   text-align: center;
   top: 8%;
+  flex: 1 1 auto;
 }
 
 .sidebar li {
@@ -137,6 +150,7 @@ header {
   transition: margin 0.7s ease;
   background-color: white;
   overflow: scroll;
+  flex: 1 0 auto;
 }
 
 .progress-meter {
@@ -147,7 +161,7 @@ header {
   background-color: aqua;
   z-index: 2;
   content: '';
-  flex-shrink: 1;
+  flex: 1 1 auto;
   transition: width 500ms ease;
 }
 
@@ -195,4 +209,71 @@ img.active {
 
 .salutation {
   text-align: center;
+}
+
+@media screen and (max-width: 980px) {
+  .two-column {
+    flex-direction: column;
+  }
+
+  .two-column p:first-child {
+    padding: 0;
+  }
+
+  .two-column p:last-child {
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  .two-column {
+    width: 75%;
+  }
+
+  img {
+    width: 75%;
+  }
+
+  .text-block {
+    width: 75%;
+  }
+
+  .hamburger-container {
+    left: 4.5%;
+  }
+
+  .hamburger::before {
+    left: 4.5%;
+  }
+
+  .hamburger::after {
+    left: 4.5%;
+  }
+
+  .hamburger {
+    left: 4.5%;
+  }
+
+  .hamburger-container.open {
+    left: 20%;
+  }
+  
+  .open .hamburger {
+    left: -15%;
+    transition: left 0.6s ease;
+  }
+  
+  .open .hamburger:before {
+    left: 18.5%;
+    transform: rotate(-225deg);
+    transition: all 0.7s ease;
+    top: 40px;
+  }
+  
+  .open .hamburger:after {
+    left: 18.5%;
+    transform: rotate(225deg);
+    transition: all 0.7s ease;
+    top: 40px;
+  }
 }
