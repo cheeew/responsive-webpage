@@ -4,6 +4,7 @@ body {
   padding: 0 0 0 0;
   line-height: 1.25;
   width: 100vw;
+  overflow-x: hidden;
 }
 
 h1, h3, p {
@@ -27,19 +28,10 @@ nav {
   width: 15%;
 }
 
-header {
-  margin-top: 3%;
+.page-title {
   text-align: center;
   flex: 1 1 auto;
-  width: 75%;
-}
-
-.page-title {
-  flex: 0 1 auto;
-}
-
-.sub-title {
-  flex: 0 1 auto;
+  width: 100%;
 }
 
 .sidebar {
@@ -142,7 +134,7 @@ header {
 /*Page Styles*/
 .focus-content {
   position: relative;
-  padding-top: 20px;
+  padding-top: 5%;
   z-index: 1;
   display: flex;
   flex-direction: column;
@@ -162,7 +154,7 @@ header {
   z-index: 2;
   content: '';
   flex: 1 1 auto;
-  transition: width 500ms ease;
+  transition: width 300ms ease;
 }
 
 .two-column {
@@ -195,7 +187,7 @@ img {
   flex-shrink: 1;
   transform: translateX(100px);
   opacity: 0;
-  transition: transform 500ms ease, opacity 500ms ease;
+  transition: transform 600ms ease, opacity 600ms ease;
 }
 
 img.active {
@@ -214,6 +206,7 @@ img.active {
 @media screen and (max-width: 980px) {
   .two-column {
     flex-direction: column;
+    width: 75%;
   }
 
   .two-column p:first-child {
@@ -222,12 +215,6 @@ img.active {
 
   .two-column p:last-child {
     padding: 0;
-  }
-}
-
-@media screen and (max-width: 980px) {
-  .two-column {
-    width: 75%;
   }
 
   img {
@@ -239,19 +226,27 @@ img.active {
   }
 
   .hamburger-container {
-    left: 4.5%;
+    left: 4%;
+    height: 18.75px;
+    width: 22.5px;
   }
 
   .hamburger::before {
-    left: 4.5%;
+    left: 4%;
+    width: 27.5px;
+    height: 3.5px;
   }
 
   .hamburger::after {
-    left: 4.5%;
+    left: 4%;
+    width: 27.5px;
+    height: 3.5px;
   }
 
   .hamburger {
-    left: 4.5%;
+    left: 4%;
+    width: 27.5px;
+    height: 3.5px;
   }
 
   .hamburger-container.open {

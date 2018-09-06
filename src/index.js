@@ -1,6 +1,9 @@
 import debounce from 'lodash.debounce';
+
 const images = [...document.querySelectorAll('img')]; 
 const progressMeter = document.querySelector('.progress-meter');
+const heading = document.querySelector('.page-title');
+const body = document.querySelector('.focus-content');
 
 const hamburger = document.querySelector('.hamburger-container');
   const focus = document.querySelector('.focus-content');
@@ -25,11 +28,8 @@ const hamburger = document.querySelector('.hamburger-container');
     const scrollHeight = window.scrollY;
     const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
     const scrollPercent = Math.round((scrollHeight / maxScroll) * 100);
-    console.log(scrollPercent);
     progressMeter.style.width = `${scrollPercent}%`;
   }
-
-
 
   hamburger.addEventListener('click', dropDownMenu);
   window.addEventListener('scroll', debounce(imageTransition, 50));
