@@ -153,7 +153,8 @@ nav {
   align-items: center;
   transition: margin 0.7s ease;
   background-color: white;
-  overflow: scroll;
+  overflow-y: scroll;
+  overflow-x: hidden;
   flex: 1 0 auto;
 }
 
@@ -335,11 +336,14 @@ img.active {
 
   nav {
     width: 100vw;
-    scroll
   }
 
   .focus-content.open {
     margin-left: 100%;
+  }
+
+  .open .hamburger-container {
+    left: 86%;
   }
 
   .open .hamburger {
@@ -351,7 +355,6 @@ img.active {
     left: 86%;
     transform: rotate(-225deg);
     transition: all 0.7s ease;
-    top: 40px;
     background-color: white;
   }
   
@@ -359,7 +362,6 @@ img.active {
     left: 86%;
     transform: rotate(225deg);
     transition: all 0.7s ease;
-    top: 40px;
     background-color: white;
   }
 }
