@@ -356,7 +356,6 @@ img.active {
     transform: rotate(-225deg);
     background-color: rgb(255, 255, 255);
     transition: all 0.7s ease;
-    z-index: 2;
   }
   
   .open .hamburger:after {
@@ -364,7 +363,6 @@ img.active {
     transform: rotate(225deg);
     background-color: rgb(255, 255, 255);
     transition: all 0.7s ease;
-    z-index: 2;
   }
 }
 
