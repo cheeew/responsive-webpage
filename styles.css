@@ -323,15 +323,15 @@ img.active {
   }
 
   .text-block {
-    width: 90%;
+    width: 92%;
   }
 
   .two-column {
-    width: 90%;
+    width: 92%;
   }
 
   img {
-    width: 90%;
+    width: 92%;
   }
 
   nav {
@@ -354,15 +354,15 @@ img.active {
   .open .hamburger:before {
     left: 86%;
     transform: rotate(-225deg);
-    transition: all 0.7s ease;
     background-color: white;
+    transition: all 0.7s ease;
   }
   
   .open .hamburger:after {
     left: 86%;
     transform: rotate(225deg);
-    transition: all 0.7s ease;
     background-color: white;
+    transition: all 0.7s ease;
   }
 }
 
