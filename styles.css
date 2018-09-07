@@ -29,9 +29,17 @@ nav {
 }
 
 .page-title {
-  text-align: center;
-  flex: 1 1 auto;
-  width: 100%;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  transition: width 700ms ease;
+  margin-top: 70px;
+}
+
+.sub-title {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
 }
 
 .sidebar {
@@ -39,7 +47,7 @@ nav {
   list-style: none;
   padding: 0;
   text-align: center;
-  top: 8%;
+  top: 70px;
   flex: 1 1 auto;
 }
 
@@ -60,16 +68,16 @@ nav {
 .hamburger-container {
   position: fixed;
   z-index: 2;
-  top: 30px;
-  left: 7.5%;
+  top: 27px;
+  left: 6%;
   height: 25px;
   width: 30px;
   transition: left 0.7s ease;
 }
 
 .hamburger {
-  top: 40px;
-  left: 7.5%;
+  top: 38px;
+  left: 6%;
   transition: left 0.7s ease;
   width: 30px;
   height: 4px;
@@ -80,8 +88,8 @@ nav {
 
 .hamburger:before {
   position: fixed;
-  top: 30px;
-  left: 7.5%;
+  top: 28px;
+  left: 6%;
   transition: all 0.7s ease;
   width: 30px;
   height: 4px;
@@ -92,8 +100,8 @@ nav {
 
 .hamburger:after {
   position: fixed;
-  top: 50px;
-  left: 7.5%;
+  top: 48px;
+  left: 6%;
   transition: all 0.7s ease;
   width: 30px;
   height: 4px;
@@ -105,6 +113,7 @@ nav {
 /*Hamburger Transition Styles*/
 .hamburger-container.open {
   left: 20%;
+  top: 29px;
 }
 
 .open .hamburger {
@@ -132,9 +141,12 @@ nav {
 }
 
 /*Page Styles*/
+.mobile-header {
+  display: none;
+}
+
 .focus-content {
   position: relative;
-  padding-top: 5%;
   z-index: 1;
   display: flex;
   flex-direction: column;
@@ -227,8 +239,8 @@ img.active {
 
   .hamburger-container {
     left: 4%;
-    height: 18.75px;
-    width: 22.5px;
+    height: 25px;
+    width: 27px;
   }
 
   .hamburger::before {
@@ -250,7 +262,7 @@ img.active {
   }
 
   .hamburger-container.open {
-    left: 20%;
+    left: 21%;
   }
   
   .open .hamburger {
@@ -259,16 +271,107 @@ img.active {
   }
   
   .open .hamburger:before {
-    left: 18.5%;
+    left: 21%;
     transform: rotate(-225deg);
     transition: all 0.7s ease;
     top: 40px;
   }
   
   .open .hamburger:after {
-    left: 18.5%;
+    left: 21%;
     transform: rotate(225deg);
     transition: all 0.7s ease;
     top: 40px;
+  }
+
+  .focus-content.open {
+    margin-left: 18%;
+  }
+
+  nav {
+    width: 18%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  header {
+    display: none;
+  }
+
+  .mobile-header {
+    font-size: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-shadow: 1px 1px grey;
+    width: 100vw;
+    height: 85px;
+    position: fixed;
+    background-color: white;
+    z-index: 1;
+    transition: margin 700ms ease;
+  }
+
+  .open .mobile-header {
+    margin-left: 50%;
+  }
+
+  .two-column {
+    margin-top: 85px;
+  }
+
+  .text-block {
+    width: 90%;
+  }
+
+  .two-column {
+    width: 90%;
+  }
+
+  img {
+    width: 90%;
+  }
+
+  nav {
+    width: 100vw;
+    scroll
+  }
+
+  .focus-content.open {
+    margin-left: 100%;
+  }
+
+  .open .hamburger {
+    left: -15%;
+    transition: left 0.6s ease;
+  }
+  
+  .open .hamburger:before {
+    left: 86%;
+    transform: rotate(-225deg);
+    transition: all 0.7s ease;
+    top: 40px;
+    background-color: white;
+  }
+  
+  .open .hamburger:after {
+    left: 86%;
+    transform: rotate(225deg);
+    transition: all 0.7s ease;
+    top: 40px;
+    background-color: white;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .mobile-header {
+    font-size: 9px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .mobile-header {
+    font-size: 8px;
   }
 }

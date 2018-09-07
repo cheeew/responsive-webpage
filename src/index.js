@@ -2,11 +2,8 @@ import debounce from 'lodash.debounce';
 
 const images = [...document.querySelectorAll('img')]; 
 const progressMeter = document.querySelector('.progress-meter');
-const heading = document.querySelector('.page-title');
-const body = document.querySelector('.focus-content');
-
 const hamburger = document.querySelector('.hamburger-container');
-  const focus = document.querySelector('.focus-content');
+const focus = document.querySelector('.focus-content');
 
   function dropDownMenu() {
     focus.classList.toggle('open');
